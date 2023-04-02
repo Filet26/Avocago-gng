@@ -58,7 +58,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-image: url("../../assets/img/avocado-bg.png");
-  background-repeat: repeat;
   background-size: 100vh 100vh; /* set a fixed size for the background image */
   z-index: 1;
   overflow-x: hidden;
@@ -138,6 +137,11 @@ body {
     background-size: contain;
   }
 
+  .container-duo {
+    background-size: contain;
+    margin-top: -1.2rem;
+  }
+
   .container-hero h1 {
     padding: 1rem;
     font-size: 1.5rem;
@@ -205,5 +209,28 @@ footer {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* =============================== DISCO MODE ============================== */
+.disco-mode {
+  animation: disco 0.5s infinite;
+}
+
+@keyframes disco {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    filter: hue-rotate(270deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
