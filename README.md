@@ -1,2 +1,2 @@
-# Avocago-gng
+# Avocago-squad 😋
 Avocado 🥑
