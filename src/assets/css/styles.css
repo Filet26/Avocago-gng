@@ -21,13 +21,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 140vh;
+  min-height: 100vh;
   background-image: url("../../assets/img/avocado-bg.png");
+  background-size: 100vh 100vh; /* set a fixed size for the background image */
   z-index: 1;
   overflow-x: hidden;
-  margin-top: -160px;
-  background-size: cover;
   background-position: center;
+}
+
+.container-hero h1 {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
 }
 
 .logo-group {
@@ -43,6 +48,26 @@ body {
   position: relative;
   font-size: 18px;
 }
+
+/* ======================= SECONDARY =========================== */
+.container-duo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../assets/img/avocado-bg.png");
+  background-repeat: repeat;
+  background-size: 100vh 100vh; /* set a fixed size for the background image */
+  z-index: 1;
+  overflow-x: hidden;
+  background-position: center;
+  filter: invert(1);
+}
+
+/* ========================END SECONDARY ======================== */
+
 /*  ======================= NAV ========================== */
 
 /* Navbar styling */
@@ -112,6 +137,16 @@ body {
   .container-hero {
     background-size: contain;
   }
+
+  .container-hero h1 {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .arrow-down {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* ======================== FOOTER ============================ */
@@ -147,4 +182,28 @@ footer {
 ::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 5px;
+}
+
+/* =============================== ARROW ============================== */
+.arrow-down {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  animation: arrow-bounce 1s infinite;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
