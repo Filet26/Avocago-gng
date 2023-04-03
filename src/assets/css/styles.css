@@ -62,7 +62,62 @@ body {
   z-index: 1;
   overflow-x: hidden;
   background-position: center;
-  filter: invert(1);
+  filter: hue-rotate(90deg);
+}
+
+.container-duo h1 {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+.container-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about {
+  flex-basis: 50%;
+  padding: 20px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.about-txt-1 {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+}
+
+.desmos-eating {
+  font-size: 0.7rem;
 }
 
 /* ========================END SECONDARY ======================== */
@@ -142,6 +197,30 @@ body {
     margin-top: -1.2rem;
   }
 
+  .container-duo h1 {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .about {
+    padding: 0.5rem;
+    max-width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    justify-content: center;
+    align-items: center;
+  }
   .container-hero h1 {
     padding: 1rem;
     font-size: 1.5rem;
@@ -151,11 +230,49 @@ body {
     width: 30px;
     height: 30px;
   }
+  .container-about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  table {
+    max-width: 80%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  table tbody tr td p.desmos-eating {
+    font-size: 0.5rem;
+  }
+
+  th,
+  td {
+    padding: 1px;
+    text-align: left;
+    border: 1px solid black;
+    font-size: 0.5rem;
+  }
+
+  th {
+    background-color: #ddd;
+  }
+
+  @media only screen and (max-width: 600px) {
+    table {
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+  }
 }
 
 /* ======================== FOOTER ============================ */
 footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 20px;
@@ -164,6 +281,9 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* responsive */
@@ -233,4 +353,54 @@ footer {
   100% {
     filter: hue-rotate(360deg);
   }
+}
+
+/* ============================== ARROW ==================================== */
+
+.arrow-up {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  margin: 1rem;
+  animation: arrow-bounce 1s infinite;
+  background-image: url("../../assets/img/arrow-img.png");
+  rotate: 180deg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* ================================= TABLE ==================================== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+table thead tr th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tbody tr:hover {
+  background-color: #ddd;
+}
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+table td:first-child {
+  text-align: left;
+}
+table td:last-child {
+  font-weight: bold;
 }
