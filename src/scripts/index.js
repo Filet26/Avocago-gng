@@ -23,14 +23,7 @@ button.addEventListener("click", () => {
 
 const boom_btn = document.getElementById("boom-btn");
 const boom = document.getElementById("boom");
-let isPlayingBoom = false;
 
 boom_btn.addEventListener("click", () => {
-  if (!isPlayingBoom) {
-    boom.play();
-    isPlayingBoom = true;
-  } else {
-    boom.pause();
-    isPlayingBoom = false;
-  }
+  boom.play();
 });
