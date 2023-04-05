@@ -21,9 +21,18 @@ button.addEventListener("click", () => {
   }
 });
 
-const boom_btn = document.getElementById("boom-btn");
+const boom_btn = document.querySelectorAll(".boom-btn");
 const boom = document.getElementById("boom");
 
-boom_btn.addEventListener("click", () => {
-  boom.play();
+boom_btn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    boom.play();
+  });
 });
+
+// const boom_btn = document.getElementById("boom-btn");
+// const boom = document.getElementById("boom");
+
+// boom_btn.addEventListener("click", () => {
+//   boom.play();
+// });
